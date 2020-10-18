@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Python app to Azure Web App - reforestin24
+name: Build and deploy JAR app to Azure Web App - reforestin24
 
 on:
   push:
@@ -15,20 +15,18 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - name: Set up Python version
-      uses: actions/setup-python@v1
+    - name: Set up Java version
+      uses: actions/setup-java@v1
       with:
-        python-version: '3.8'
+        java-version: '11'
 
-    - name: Build using AppService-Build
-      uses: azure/appservice-build@v2
-      with:
-        platform: python
-        platform-version: '3.8'
+    - name: Build with Maven
+      run: mvn clean install
 
-    - name: 'Deploy to Azure Web App'
+    - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'reforestin24'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_9a92de8418da48e1b74e13f37895b4ba }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c9f003668bef418baa2d0efb64cc961a }}
+        package: '${{ github.workspace }}/target/*.jar'

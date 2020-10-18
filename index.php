@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Mi segunda pagina web Editada  </title>
+<title>Mi segunda pagina web Editado </title>
 </head>
 <body style="background-color:00BB2D;">
 <h1 align="center" >Mi segunda pagina web </h1>

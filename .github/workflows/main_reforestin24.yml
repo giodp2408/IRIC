@@ -31,4 +31,4 @@ jobs:
       with:
         app-name: 'reforestin24'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_64510c8fb172400d99f0a3f2d23eb60b }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e27f0da7222d42f19a38718270d2cbe7 }}

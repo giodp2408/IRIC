@@ -1,10 +1,10 @@
 <html>
 <head>
-<title>Mi primera pagina web </title>
+<title>Mi segunda pagina web y editado </title>
 </head>
 <body style="background-color:00BB2D;">
-<h1 align="center" >Mi Primera pagina web </h1>
+<h1 align="center" >Mi segunda pagina web y editado </h1>
 <hr>
-<p>Pagina de prueba HTML.</p>
+<p> Pagina editada para verificar si funciona en Azure </p>
 </body>
 </html> 
